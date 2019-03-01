@@ -1,0 +1,5 @@
+pciinfo.cpp(126): Warning! W389: (col 65) integral value may be truncated during assignment or initialization 
+pciinfo.cpp(127): Warning! W389: (col 63) integral value may be truncated during assignment or initialization 
+pciinfo.cpp(128): Warning! W389: (col 73) integral value may be truncated during assignment or initialization 
+pciinfo.cpp(135): Warning! W389: (col 68) integral value may be truncated during assignment or initialization 
+pciinfo.cpp(140): Warning! W389: (col 68) integral value may be truncated during assignment or initialization 

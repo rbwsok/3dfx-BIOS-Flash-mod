@@ -1,0 +1,25 @@
+
+3dfx EEPROM Flash Utility   Version 2.17
+Copyright (c) 1998 by 3dfx Interactive, Inc.
+All rights reserved.
+3dfx cards: 1
+0x10 - phys addr(dwPhysMemBase0): 0xC8000000   lin addr: 0xC8000000
+0x1A - addr(wIOBase): 0x1000
+0x30 - phys addr(dwPhysOrgROMBase): 0xC8A00000   lin addr: 0xC8A00000
+0x04 - addr(wPCICommand): 0x3
+     - phys addr(dwPhysROMBase): 0xC8A00000   lin addr: 0xC8A00000
+ --- BeginROM
+dwPhysROMBase: 0xC8A00000, 0xC8A00001
+wPCICommand: 0x3, 0x3
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+FlushBus - wIOBase: 0x1000
+byMan: 0x1F  byDevice: 0x3   wSectorSize: : 0x1

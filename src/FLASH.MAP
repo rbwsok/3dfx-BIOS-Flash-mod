@@ -1,0 +1,456 @@
+WATCOM Linker Version 10.0
+Copyright by WATCOM International Corp. 1985, 1994. All rights reserved.
+Created on:       07/06/05 09:03:24
+Executable Image: flash.exe
+creating a Rational Systems executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        0000c810
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000010
+_TEXT                  CODE                          0001:00000010   000067a4
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   000002d8
+CONST2                 DATA           DGROUP         0002:000002dc   0000010c
+_DATA                  DATA           DGROUP         0002:000003e8   00008f28
+TIB                    DATA           DGROUP         0002:00009310   00000000
+TI                     DATA           DGROUP         0002:00009310   00000000
+TIE                    DATA           DGROUP         0002:00009310   00000000
+XIB                    DATA           DGROUP         0002:00009310   00000000
+XI                     DATA           DGROUP         0002:00009310   00000012
+XIE                    DATA           DGROUP         0002:00009322   00000000
+YIB                    DATA           DGROUP         0002:00009322   00000000
+YI                     DATA           DGROUP         0002:00009322   00000006
+YIE                    DATA           DGROUP         0002:00009328   00000000
+DATA                   DATA           DGROUP         0002:00009328   00000000
+_BSS                   BSS            DGROUP         0002:00009328   000014e0
+STACK                  STACK          DGROUP         0002:0000a810   00002000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: main.obj(E:\WATCOM\FLASH2\main.cpp)
+0001:00000010  main_
+0001:00001058* short unsigned near InitBoard( short unsigned )
+0001:0000120c* short unsigned near SelectBoard()
+0001:0000142c* short unsigned near ValidateNewROM( short unsigned )
+0002:00009328  long unsigned near dwOldROMSaveSize
+0002:0000932c  long unsigned near dwNewBinFileSize
+Module: user.obj(E:\WATCOM\FLASH2\user.cpp)
+0001:00001ad0  short unsigned near ContinueYN( char near * )
+0001:00001b28* void near DisplayChar( char )
+0001:00001b48  void near DisplayCopyright()
+0001:00001b50  void near DisplayUsage()
+0001:00001b58  void near DisplayString( char near * )
+0001:00001b7c  void near DisplayFormattedString( char near *, ... )
+Module: rom.obj(E:\WATCOM\FLASH2\rom.cpp)
+0001:00001bb0  void near BeginROM()
+0001:00001cac  void near EndROM()
+0001:00001d38+ void near ROMByteWrite( short unsigned, char unsigned )
+0001:00001d6c  char unsigned near ROMByteRead( short unsigned )
+0001:00001da0* void near FlushBus()
+0001:00001dbc  void near GetROMID( char unsigned near *, char unsigned near *, short unsigned near * )
+0001:00001ec0+ void near SendROMCommand( char unsigned )
+0001:00001ef4  short unsigned near SaveROM( char near *, short unsigned near * )
+0001:00001f9c  short unsigned near WriteROMRestore( short unsigned near *, short unsigned near * )
+0001:00002034  short unsigned near WriteROMFromFile( int, short unsigned near *, short unsigned near * )
+0001:00002340  void near ROMErase()
+0001:00002380+ short unsigned near ROMVerifyWrite( short unsigned, char unsigned )
+Module: util.obj(E:\WATCOM\FLASH2\util.cpp)
+0001:000024c0  void near RealModeINT( tagREALMODECALL near *, char unsigned )
+0001:00002520  short unsigned near AllocateFlatDescriptor()
+0001:00002594  void near FreeDescriptor( short unsigned )
+0001:000025bc* void near _outp( short unsigned, char unsigned )
+0001:000025c8* void near _outpw( short unsigned, short unsigned )
+0001:000025d4  void near _outpd( short unsigned, long unsigned )
+0001:000025e0+ char unsigned near _inp( short unsigned )
+0001:000025e8* short unsigned near _inpw( short unsigned )
+0001:000025f4  long unsigned near _inpd( short unsigned )
+0001:000025fc  long unsigned near Phys2Linear( long unsigned, long unsigned )
+0001:00002660  void near Delay15us( long )
+Module: data.obj(E:\WATCOM\FLASH2\data.cpp)
+0002:00009330  short unsigned near bFoundV3
+0002:00009332  short unsigned near bFoundNapalm
+0002:00009334  short unsigned near bFoundRampage
+0002:00009338  __94gorBOARDDESC near sBoardsDesc[]
+0002:00009374  short unsigned near wNumBoards
+0002:00009376  short unsigned near wDeviceID
+0002:00009378  __687q5bChipSpeedVer near sChipSpeedVer[]
+0002:000004a4  char unsigned near tblROMImage[]
+0002:000084a4  char near sChipSRAMType[][4]
+0002:000084ac  char near sVd3Velocity[]
+0002:000084b8  char near sVoodoo3[]
+0002:000084c0  __687q5bChipSpeedVer near sV3SpeedVer[]
+0002:000084e4  __3erb81ChipBuildInfo near sV3Builds[]
+0002:000087c8  char near sVoodoo4[]
+0002:000087d0  char near sVoodoo5[]
+0002:000087d8  __687q5bChipSpeedVer near sNapalmSpeedVer[]
+0002:00008810  __3erb81ChipBuildInfo near sNapalmBuilds[]
+0002:000088d0  char near sRampage[]
+0002:000088d8  __687q5bChipSpeedVer near sRampageSpeedVer[]
+0002:000093b4  __3erb81ChipBuildInfo near sChipBuilds[]
+0002:0000979c  int near hInFile
+0002:000097a0  short unsigned near selFlat
+0002:000097a2  short unsigned near selData
+0002:000097a4  short unsigned near wBusDevID
+0002:000097a6  short unsigned near wIOBase
+0002:000097a8  short unsigned near wPCICommand
+0002:000097aa  char unsigned near byMan
+0002:000097ab  char unsigned near byDevice
+0002:000097ac  long unsigned near dwOrgMiscInit0
+0002:000097b0  long unsigned near dwOrgMiscInit1
+0002:000097b4  long unsigned near dwPhysMemBase0
+0002:000097b8  char unsigned far * near lpLinMemBase0
+0002:000097c0  long unsigned near dwPhysOrgROMBase
+0002:000097c4  long unsigned near dwLinOrgROMBase
+0002:000097c8  long unsigned near dwPhysROMBase
+0002:000097cc  char unsigned far * near lpLinROMBase
+0002:000088e4  __3erb81ChipBuildInfo near sRampageBuilds[]
+0002:000088f8  __iobuf near * near hOutDevice
+0002:000088fc  short unsigned near wSectorSize
+0002:00008900  char near szROMSaveFile[]
+0002:00008a00* char near szBusType[][4]
+0002:00008a08  __piolkDeviceName near TdfxDeviceName[]
+0002:00008a8c  char near szCopyright[]
+0002:00008b18  char near szInvalidArgs[]
+0002:00008b64  char near szUsage[]
+0002:00008cb0  char near szNoFile[]
+0002:00008cc4* char near szReadError[]
+0002:00008ce0* char near szSyntaxError[]
+0002:00008cf0  char near szResetMsg[]
+0002:00008d20  char near szNoBoard[]
+0002:00008d5c  char near szUnknownDevice[]
+0002:00008dac  char near szSuccess[]
+0002:00008e10  char near szBurnError[]
+0002:00008e58  char near szInvalidROM[]
+0002:00008edc  char near szNoSuccess[]
+0002:00008f30  char near szSaveSuccess[]
+0002:00008f58  char near szNoSave[]
+0002:00008f84  char near szBeginROM[]
+0002:00008fa0  char near szCompleted[]
+0002:00008fac  char near szROMErase[]
+0002:00008fc0  char near szSetupFailed[]
+0002:00008fe4  char near szHelp0[]
+0002:00008fe8  char near szHelp1[]
+0002:00008ff0  char near szReset[]
+0002:000097d4  long unsigned far * near lpLinMiscInit0
+0002:000097dc  long unsigned far * near lpLinMiscInit1
+0002:000097e4  char unsigned near byBuffer[]
+Module: pciinfo.obj(E:\WATCOM\FLASH2\pciinfo.cpp)
+0001:000026c8+ long unsigned near _pciCreateConfigAddress( long unsigned, long unsigned, long unsigned, long unsigned )
+0001:000026f0+ short unsigned near _pciCreateConfigSpaceMapping( long unsigned, long unsigned )
+0001:00002708+ long unsigned near _pciFetchRegister( long unsigned, long unsigned, long unsigned, long unsigned )
+0001:000027ac  short unsigned near PCIEnumerate()
+Module: e:\WATCOM\lib386\dos\clib3r.lib(stricmp)
+0001:000028dc  stricmp_
+0001:000028dc* _stricmp_
+0001:000028dc* strcmpi_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(exit)
+0001:00002915+ __null_int23_exit_
+0001:00002916  exit_
+0001:0000292e+ _exit_
+0002:00008ff8+ ___atexit
+0002:00008ffc+ ___int23_exit
+0002:00009000+ ___FPE_handler_exit
+Module: e:\WATCOM\lib386\dos\clib3r.lib(open)
+0001:00002944  open_
+0001:00002968+ sopen_
+0001:00002b2d* __set_binary_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(scanf)
+0001:00002bf8+ vscanf_
+0001:00002c23  scanf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(iob)
+0002:00009004  ___iob
+0002:0000920c* ___tmpfnext
+0002:0000920d  __fmode
+0002:0000a7e8  ___ClosedStreams
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fflush)
+0001:00002c3e  fflush_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(read)
+0001:00002c4e  read_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(lseek)
+0001:00002d61  lseek_
+0001:00002d61* _lseek_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(strstr)
+0001:00002da2  strstr_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(printf)
+0001:00002e64  printf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(filelen)
+0001:00002e86  filelength_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(close)
+0001:00002ec3  close_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fclose)
+0001:00002ec8  fclose_
+0001:00002ef7  __shutdown_stream_
+0001:00002f18+ __MkTmpFile_
+0001:00002f81+ __doclose_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(cstrt386)
+0001:00000003* ___begtext
+0002:00000000* __nullarea
+0002:00009310* __start_TI
+0002:00009310* __end_TI
+0002:00009218* __GDAptr
+0002:0000921c* __D16Infoseg
+0002:0000921e* __x386_zero_base_selector
+0001:0000300c  _cstart_
+0001:0000329d  __exit_
+0001:0000329f  __do_exit_with_msg__
+0001:000032d8* __GETDS
+Module: e:\WATCOM\lib386\dos\clib3r.lib(argcv386)
+0002:00009220  __argc
+0002:00009224  __argv
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fprintf)
+0001:000032e2  fprintf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fscanf)
+0001:00003359+ vfscanf_
+0001:00003380  fscanf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(vfprintf)
+0001:000033a1  vfprintf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(write)
+0001:000033a6  write_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(intx386)
+0001:00003577  int386x_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(int386)
+0001:00003590  int386_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(isatt)
+0001:000035ab  isatty_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(seterrno)
+0001:000035c9* __set_EDOM_
+0001:000035ce  __set_errno_
+0001:000035da* __set_ERANGE_
+0001:000035e1* __set_EINVAL_
+0001:000035f1  __set_doserrno_
+0001:000035fd* __FPE_exception_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(dosret)
+0001:00003604* _dosret0_
+0001:0000360b* _dosretax_
+0001:00003610  __set_errno_dos_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(umaskval)
+0002:0000923c  ___umaskval
+Module: e:\WATCOM\lib386\dos\clib3r.lib(iomode)
+0001:00003676  __IOMode_
+0001:000036cb  __SetIOMode_
+0002:00009240+ ___NFiles
+0002:00009244+ ___init_mode
+0002:00009294+ __iomode
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fgetc)
+0001:000036e0  fgetc_
+0001:00003769+ __filbuf_
+0001:00003798+ __fill_buffer_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(ungetc)
+0001:00003843  ungetc_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(scnf)
+0001:000038c5  __scnf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(stinit)
+0002:0000a7ec  ___OpenStreams
+Module: e:\WATCOM\lib386\dos\clib3r.lib(flush)
+0001:00004410  __flush_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(flushall)
+0001:000044cf  flushall_
+0001:000044d4  __flushall_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fprtf)
+0001:00004514  __fprtf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(_clse)
+0001:00004599  __close_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(allocfp)
+0001:000045cb* __allocfp_
+0001:00004673  __freefp_
+0001:000046ac  __purgefp_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(gtpid)
+0001:000046ca  getpid_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(ftell)
+0001:000046d0  ftell_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(nfree)
+0001:00004700  _nfree_
+0001:00004700  free_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(remove)
+0001:0000475e  remove_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(cmain386)
+0001:00004763  __CMain
+Module: e:\WATCOM\lib386\dos\clib3r.lib(inirt386)
+0001:000047b2  __InitRtns
+0001:000047fd  __FiniRtns
+Module: e:\WATCOM\lib386\dos\clib3r.lib(seg386)
+0000:00001234  __DOSseg__
+Module: e:\WATCOM\lib386\dos\clib3r.lib(crwd386)
+0002:000092a8  __psp
+0002:000092d3  __osmajor
+0002:000092d4  __osminor
+0002:000092ca  __Extender
+0002:000092cb  __ExtenderSubtype
+0002:000092cc  __X32VM
+0002:000092ac* __x386_stacklow
+0002:000092a0  __LpCmdLine
+0002:000092a4  __LpPgmName
+0002:00009298  __dynend
+0002:0000929c  __curbrk
+0002:000092ac  __STACKLOW
+0002:000092b0  __STACKTOP
+0002:000092b4  __ASTACKSIZ
+0002:000092b8  __ASTACKPTR
+0002:000092bc  __cbyte
+0002:000092c0* __cbyte2
+0002:000092c4  __child
+0002:000092cd  __Envptr
+0002:000092d1  __Envseg
+0002:000092c8  __no87
+0002:000092d5  __FPE_handler
+0002:000092d5  ___FPE_handler
+Module: e:\WATCOM\lib386\dos\clib3r.lib(initargv)
+0001:0000484d  __Init_Argv_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(stack386)
+0001:000049f3  stackavail_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(stk386)
+0001:00004a17* __STK
+0001:00004a04* __CHK
+0001:00004a14* __GRO
+0001:00004a35  __STKOVERFLOW_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(intxa386)
+0001:00004a44  __int386x_
+0001:00004aa1* _DoINTR_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(segread)
+0001:00004e22  segread_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(errno)
+0001:00004e4a  __get_errno_ptr_
+0001:00004e50  __get_doserrno_ptr_
+0002:0000a7f0+ __doserrno
+0002:0000a7f4+ _errno
+Module: e:\WATCOM\lib386\dos\clib3r.lib(ioalloc)
+0001:00004e56  __ioalloc_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(gtche)
+0001:00004ecd  getche_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(qread)
+0001:00004eea  __qread_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(istable)
+0002:000002e4  __IsTable
+Module: e:\WATCOM\lib386\dos\clib3r.lib(set386)
+0001:00004f10  memset_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(noefgfmt)
+0002:000092f0  ___EFG_printf
+0002:000092f4  ___EFG_scanf
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fdfs386)
+0001:00004f3a  __FDFS
+Module: e:\WATCOM\lib386\dos\clib3r.lib(tolower)
+0001:00004f86  tolower_
+0001:00004f86* _tolower_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(initfile)
+0001:00004f94  __InitFiles_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(ioexit)
+0001:0000500c  __full_io_exit_
+0001:00005018* fcloseall_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(qwrit)
+0001:0000506f  __qwrite_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(fputc)
+0001:000050eb  fputc_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(prtf)
+0001:0000518f  __prtf_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(nmalloc)
+0001:00005b89  _nmalloc_
+0001:00005b89  malloc_
+0002:000092f8  ___nheapbeg
+0002:000092fc  ___MiniHeapRover
+0002:00009300  ___LargestSizeB4MiniHeapRover
+Module: e:\WATCOM\lib386\dos\clib3r.lib(tell)
+0001:00005c6c  tell_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(memalloc)
+0001:00005c7e  __MemAllocator
+0001:00005d26  __MemFree
+Module: e:\WATCOM\lib386\dos\clib3r.lib(heapmod)
+0002:0000a7f8* ___fheap_clean
+0002:0000a7f9  ___nheap_clean
+Module: e:\WATCOM\lib386\dos\clib3r.lib(unlnk)
+0001:00005e31  unlink_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(cinit)
+0001:00005e50  __CommonInit_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(___argc)
+0002:0000a7fc  ____Argc
+0002:0000a800  ____Argv
+Module: e:\WATCOM\lib386\dos\clib3r.lib(xmsg)
+0001:00005e5b* __exit_with_msg_
+0001:00005e60  __fatal_runtime_error_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(chktty)
+0001:00005e7d  __chktty_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(__stos)
+0001:00005eb0  __STOSB
+0001:00005ee7* __STOSD
+Module: e:\WATCOM\lib386\dos\clib3r.lib(itoa)
+0001:00005f78+ utoa_
+0001:00005fc2  itoa_
+0001:00005fc2* _itoa_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(ltoa)
+0001:00006002  ultoa_
+0001:0000604b  ltoa_
+0001:0000604b* _ltoa_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(toupper)
+0001:00006066  toupper_
+0001:00006066* _toupper_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(grownear)
+0001:000060b3+ __FreeDPMIBlocks_
+0001:00006111* __ReAllocDPMIBlock_
+0001:0000626f+ __LastFree_
+0001:0000643f  __ExpandDGROUP_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(nmemneed)
+0001:000065fa  __nmemneed_
+Module: e:\WATCOM\lib386\dos\clib3r.lib(amblksiz)
+0002:00009304  __amblksiz
+Module: e:\WATCOM\lib386\dos\clib3r.lib(enterdb)
+0001:000065fd  __EnterWVIDEO_
+0002:00009308+ ___WD_Present
+Module: e:\WATCOM\lib386\dos\clib3r.lib(minreal)
+0002:0000a804  ___minreal
+Module: e:\WATCOM\lib386\dos\clib3r.lib(heapen)
+0001:00006623* _heapenable_
+0002:0000930c  ___heap_enabled
+Module: e:\WATCOM\lib386\dos\clib3r.lib(sbrk386)
+0001:00006633* sbrk_
+0001:000066f2  __brk_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+e:\WATCOM\lib386\dos\clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  2000 (8192.)
+Memory size:  00012fc4 (77764.)
+Entry point address: 0001:0000300c

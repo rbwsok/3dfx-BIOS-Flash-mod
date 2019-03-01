@@ -1,0 +1,5 @@
+main.cpp(481): Warning! W389: (col 66) integral value may be truncated during assignment or initialization 
+main.cpp(484): Warning! W389: (col 27) integral value may be truncated during assignment or initialization 
+main.cpp(890): Warning! W389: (col 61) integral value may be truncated during assignment or initialization 
+main.cpp(899): Warning! W389: (col 57) integral value may be truncated during assignment or initialization 
+main.cpp(912): Warning! W389: (col 65) integral value may be truncated during assignment or initialization 
